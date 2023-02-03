@@ -28,6 +28,9 @@
 }
 
 @media (max-width: 600px) {
+  body {
+    background-color: aquamarine;
+  }
   .coin-table thead {
     width: 100%;
   }
