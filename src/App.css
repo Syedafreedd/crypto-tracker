@@ -1,38 +1,103 @@
-.App {
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 40%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4caf50;
   color: white;
+  border: 1px solid #4caf50;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.coin-list {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-family: "Bigelow Rules", cursive;
+  font-size: 60px;
+  color: black;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.coin-item {
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgb(99, 98, 98);
+}
+
+.coin-name {
+  font-size: 24px;
+}
+
+.coin-price {
+  font-size: 22px;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
   }
+
+  button {
+    width: 100%;
+  }
+  .coin-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+button {
+  margin-left: 30%;
+  width: 40%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
 }
