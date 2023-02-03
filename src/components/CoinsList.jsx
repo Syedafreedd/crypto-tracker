@@ -11,7 +11,7 @@ const CoinsList = ({ coins, sortAscending, handleSortClick }) => (
     </thead>
     <tbody>
       {coins
-        .sort((a, b) => (sortAscending ? a.rank - b.rank : b.rank - a.rank))
+        .sort((a, b) => (sortAscending ? a.price - b.price : b.price - a.price))
 
         .map((coin) => (
           <tr key={coin.id}>
